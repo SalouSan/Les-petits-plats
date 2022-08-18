@@ -1,0 +1,251 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+/* Navigation items */
+.en-tete{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 20%;
+}
+
+.search_bar{
+    margin-left: 5%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid transparent; 
+    width: 90%;
+    height:70px;
+    background-color: #E7E7E7;
+    border-radius: 5px;
+}
+.search_bar input {
+    flex: 1;
+    height: 70px;
+    width: 146vh;
+    background-color: #E7E7E7;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    color: black;
+    padding-left: 20px;
+}
+.nav{
+    margin: auto;
+}
+button{
+    border: none;
+    outline:none;   
+    background: none;
+    cursor: pointer;
+}
+/* Filters */
+.Filters{
+    display: flex;
+    position: relative;
+    margin : 3% 3.7% 5%;
+}
+.content{
+    position: relative;
+    font-size: 18px;
+}
+.ingredients1, .Appliances, .Ustensils{
+    border:2px solid transparent;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    height: 80px;
+    width: 150px;
+    color: white;
+    font-size: 19px;
+    padding-left: 15px;
+    position: relative;
+
+}
+.ingredients1, .List_ingredients, .ingredients_search-bar{
+    background-color: #3282F7;
+}
+.Appliances, .List_appliances, .appliances_search-bar{
+    background-color: #68D9A4;
+}
+.Ustensils, .List_ustensils, .ustensils_search-bar{
+    background-color: #ED6454;
+}
+.chevron{
+    cursor: pointer;
+    margin-left: 25px;
+}
+.chevron:hover{
+    transform: rotate(-180deg);   
+}
+.ingredients_search-bar::placeholder, .appliances_search-bar::placeholder, .ustensils_search-bar::placeholder{
+    color :#FFFFFF;
+    opacity: 0.5;
+}
+.select-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.ustensils_search-bar, .appliances_search-bar, .ingredients_search-bar{
+    width: 80%;
+    color :#FFFFFF;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    padding: 20px 20px;
+}
+.content:hover{
+    width: 45%;
+    margin-left: 1.3%;
+}
+.content:hover .chevronUp{
+    transform: rotate(-180deg);
+    margin-left: 40px;
+}
+
+.content:hover .List_ingredients, .content:hover .List_appliances, .content:hover .List_ustensils{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width :667px;
+    height: 397px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.List_ustensils, .List_appliances, .List_ingredients {
+    display: none;
+}
+.options {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 95%;
+    color: #FFFFFF;
+    margin-left: 18px;
+    line-height: 2em;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    
+}
+.search_result{
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    width: 107px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: #3282F7;
+    border: 3px solid transparent;
+    position: relative;
+    display: none;
+}
+.result{
+    display: flex;
+    margin: 5px 5px;
+    align-self: flex-end;
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: 600;
+
+}
+.close_btn{
+    position: absolute;
+    right: 2px;
+    top:4px;
+    font-weight: bolder;
+}
+
+/* Recipes cards */
+section{
+    display: grid;
+    row-gap: 23em;
+    column-gap: 35px;
+    grid-template-columns: 30% 30% 30%;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.recipes_card{
+    height: 200%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    
+}
+.rectangle{
+    height: 50%;
+    background-color: #C7BEBE;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.recipes_items{
+    margin-top: auto;
+    background-color: #E7E7E7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 50%;
+    
+}
+.titles{
+    display: flex;
+    justify-content: space-around;
+}
+.card_name{
+    font-weight: 400;
+    width: 60%;
+    padding-left: 12px;
+    
+}
+.card_time{
+    display: flex;
+    margin-right: 15px;
+    justify-content: flex-end;
+    padding-left: 15px;
+    flex-direction: row;
+    word-wrap: wrap;
+    width: 25%;
+}
+.time{
+    font-weight: 400;
+    align-self: center;
+
+}
+.clock{
+    width:20%;
+    padding-right: 5px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.ingredients{  
+    margin-top:0%;
+    line-height: 13px;
+    margin-left:5%;
+}
+.description{
+    margin-top: -4px;
+    width: 45%;
+    padding-right: 15px;
+}
+.describe{
+    height: 80px;
+    display: block;
+    text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+   
+}
