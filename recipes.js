@@ -63,7 +63,7 @@ async function getRecipes () {
         return element.displayRecipes();
     }).join("")
     let section = document.querySelector("section");
-    section.innerHTML = gallery;
+    section.innerHTML = gallery ;
 
     // Search bars event listener
     const searchBar = document.querySelector("input")
