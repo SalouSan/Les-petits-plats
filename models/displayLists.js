@@ -4,9 +4,7 @@ export class Lists {
     }
 
     ingredientsList(){
-        let a = [];
-        this.ingredients.map(x=> !a.includes(x) ? a.push(x) : "")
-        return a.map(ingredient=> 
+        return this.ingredients.map(ingredient=> 
         `<option> ${ingredient.ingredient} </option>`
         ).join("")
     }

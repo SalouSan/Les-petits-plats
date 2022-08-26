@@ -1,17 +1,10 @@
-export function filterElements (letters, elements) {
-    if (letters.length > 2){
-        for(let i=0; i< elements.length; i++){
-            if(elements[i].textContent.toLowerCase().includes(letters)){
-                elements[i].style.display = "block";
-            }
-            else{
-                elements[i].style.display = "none";
-            }
+export function filterRecipes(recipes, term){
+    let filteredRecipes = []
+
+    for(let recipe of recipes){
+        if(recipe.name.toLowerCase().includes(term.toLowerCase())){
+            filteredRecipes.push(recipe)
         }
     }
-    else {
-        for (let i=0; i<elements.length; i++){
-            elements[i].style.display= "block";
-        }
-    }
+    return filteredRecipes
 }

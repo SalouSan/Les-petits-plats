@@ -25,6 +25,9 @@ async function getRecipes () {
     function displayList (method,n){
         let listsItems = data.map(element => new Lists(element));
         let options = document.querySelectorAll(".options")
+        let ingredientsList = listsItems.map(list => {
+            return list.ingredientsList();
+        }).join(" ")
         for(let i=0; i<options.length; i++){
             options[n].innerHTML = method;
         } 
@@ -53,7 +56,7 @@ async function getRecipes () {
         console.log(a);
         let uniqArray = new Set(a)
         console.log(uniqArray)
-       
+
     }
     
     // Display recipes by default
