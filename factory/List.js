@@ -2,20 +2,22 @@
 
 /* class DisplayLists {
 
-    constructor(recipes) {
-            let listItems = new Lists(recipes)        
-            if ("ingredients" in listItems){
-                return listItems.ingredientsList()
+    constructor(recipes, type) { 
+            let listItems = new Lists(recipes)
+            switch (type) {
+                case "option1": 
+                    return listItems.ingredientsList()
+
+                case "option2":
+                    return listItems.appliancesList()
+
+                case "option3": 
+                    return listItems.ustensilsList()
+                    
             }
-            else if ("appliance" in listItems){
-                return listItems.appliancesList()
-            }
-            else if ("ustensils" in listItems){
-                return listItems.ustensilsList()
-            }
-            
+     
         
     }
 
     
-} */
+}  */

@@ -25,11 +25,19 @@ getRecipes()
 .then(()=>{
     displayRecipes(recipes)
     // Display list of filters items
-    let listsItems = new Lists(recipes)
-    let ingredientList = listsItems.ingredientsList(recipes)
-    console.log(ingredientList)
+    function displayListofFiltersItems (listRecipes) {
+        for (let recipe of listRecipes) {
+            let list = new Lists(recipe)
+            document.querySelector("#option1").innerHTML= list.ingredientsList()
+            document.querySelector("#option2").innerHTML= list.appliancesList()
+            document.querySelector("#option3").innerHTML= list.ustensilsList()
+        }
+    }
 
-    
+    displayListofFiltersItems(recipes)
+   
+        
+        
     const searchBar = document.querySelector(".search_bar input")
     // Add event listener on main search bar
     searchBar.addEventListener("keyup", (e)=>{

@@ -125,7 +125,7 @@ button{
 }
 .options {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 30% 30% 30%;
     width: 95%;
     color: #FFFFFF;
     margin-left: 18px;

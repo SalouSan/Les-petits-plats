@@ -1,28 +1,29 @@
 export class Lists {
     constructor(json){
-        Object.assign(this, json)
+        Object.assign(this, json)  
     }
 
     ingredientsList(){
-        return this.ingredients.map(ingredient=> 
-        `<option> ${ingredient.ingredient} </option>`
+        let ingredientList = this.ingredients.map(ingredient=> 
+        `<option> ${ingredient.ingredient} </option> `
         ).join("")
+        console.log(ingredientList)
+        return ingredientList
     }
     appliancesList(){
-        return `<div class="options">
-        ${this.appliances.map(appliance=>
+        let applianceArray = []
+        applianceArray.push(this.appliance)
+        return applianceArray.map(appliance=>
             `<option> ${appliance} </option>`
-            ).join("")}
-        </div>
-        `
+            ).join("")
+        
     }
+
     ustensilsList(){
-        return `<div class="options">
-        ${this.ustensils.map(ustensil=>
-            `<option> ${ustensil} </option>`
-            ).join("")}
-        </div>
-        `
+        return this.ustensils.map(ustensil=>
+            `<option> ${ustensil} </option> </br>`
+            ).join("")
+    
     }
 
 }
