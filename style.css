@@ -66,13 +66,13 @@ button{
     position: relative;
 
 }
-.ingredients1, .List_ingredients, .ingredients_search-bar{
+.ingredients1, .List_ingredients, #ingredients_search-bar{
     background-color: #3282F7;
 }
-.Appliances, .List_appliances, .appliances_search-bar{
+.Appliances, .List_appliances, #appliances_search-bar{
     background-color: #68D9A4;
 }
-.Ustensils, .List_ustensils, .ustensils_search-bar{
+.Ustensils, .List_ustensils, #ustensils_search-bar{
     background-color: #ED6454;
 }
 .chevron{
@@ -82,7 +82,7 @@ button{
 .chevron:hover{
     transform: rotate(-180deg);   
 }
-.ingredients_search-bar::placeholder, .appliances_search-bar::placeholder, .ustensils_search-bar::placeholder{
+#ingredients_search-bar::placeholder, #appliances_search-bar::placeholder, #ustensils_search-bar::placeholder{
     color :#FFFFFF;
     opacity: 0.5;
 }
@@ -90,7 +90,7 @@ button{
     display: flex;
     justify-content: space-between;
 }
-.ustensils_search-bar, .appliances_search-bar, .ingredients_search-bar{
+#ustensils_search-bar, #appliances_search-bar, #ingredients_search-bar{
     width: 80%;
     color :#FFFFFF;
     font-size: 18px;
@@ -98,16 +98,13 @@ button{
     border-radius: 5px;
     padding: 20px 20px;
 }
-.content:hover{
-    width: 45%;
-    margin-left: 1.3%;
-}
+
 .content:hover .chevronUp{
     transform: rotate(-180deg);
     margin-left: 40px;
 }
 
-.content:hover .List_ingredients, .content:hover .List_appliances, .content:hover .List_ustensils{
+.List_ingredients, .List_appliances, .List_ustensils{
     position: absolute;
     top: 0;
     left: 0;
@@ -118,11 +115,10 @@ button{
     height: 397px;
     border-radius: 5px;
     overflow: hidden;
-}
-
-.List_ustensils, .List_appliances, .List_ingredients {
     display: none;
 }
+
+
 .options {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -151,7 +147,7 @@ button{
     display: flex;
     margin: 5px 5px;
     align-self: flex-end;
-    font-size: 15px;
+    font-size: 14px;
     color: #FFFFFF;
     font-weight: 600;
 
@@ -161,6 +157,7 @@ button{
     right: 2px;
     top:4px;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 /* Recipes cards */

@@ -79,23 +79,7 @@ async function getRecipes () {
     ingredientSearchBar.addEventListener("keyup", (e) => {
         let stringSearched = e.target.value
         let theOptions = document.querySelectorAll("option")
-        for (let i=0; i<theOptions.length; i++){
-            let stringOption = theOptions[i];
-            stringOption.addEventListener("click", (e)=>{
-                e.preventDefault();
-                let searchResult = document.querySelector(".search_result")
-                searchResult.style.display = "block";
-                let small= document.querySelector(".result")
-                small.style.display = "block";
-                small.innerText = stringOption.innerText;
-                let img = document.createElement("img")
-                img.src="icons/close.svg";
-                img.setAttribute("class", "close_btn");
-                small.insertAdjacentElement("afterbegin", img)  
-                
-            })
-            
-        }
+        
         filterElements(stringSearched,theOptions)
         
     })

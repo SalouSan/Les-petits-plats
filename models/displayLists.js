@@ -4,11 +4,9 @@ export class Lists {
     }
 
     ingredientsList(){
-        let ingredientList = this.ingredients.map(ingredient=> 
-        `<option> ${ingredient.ingredient} </option> `
+        return this.ingredients.map(ingredient=> 
+        `<option> ${ingredient.ingredient} </option>`
         ).join("")
-        console.log(ingredientList)
-        return ingredientList
     }
     appliancesList(){
         let applianceArray = []
