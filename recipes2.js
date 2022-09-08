@@ -32,13 +32,11 @@ getRecipes()
         }).join(" ")
         let optionsDiv = document.querySelector(".options")
         optionsDiv.innerHTML = ingredientList
-        
-
        
     }
 
     displayListofFiltersItems(recipes)
-
+    let theOptions = document.querySelectorAll("option")
     function addTag () {   
         for (let i=0; i<theOptions.length; i++){
             let stringOption = theOptions[i];
@@ -68,6 +66,7 @@ getRecipes()
         if(e.target.value.length > 2){
             let filteredRecipes = filterRecipes(recipes, e.target.value)
             displayRecipes(filteredRecipes)
+            displayListofFiltersItems(filteredRecipes)
         }
     })
 
@@ -79,12 +78,9 @@ getRecipes()
     itemSearchBar.forEach((item)=>{
         item.addEventListener("keyup", (e) => {
             if (e.target.value.length > 2) {
-            e.preventDefault()
-            console.log("ok")
-            addTag()
-            }
-            
-            
+                e.preventDefault()
+                addTag()
+            }    
         })
     })
 
