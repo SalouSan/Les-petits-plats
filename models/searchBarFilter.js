@@ -8,3 +8,16 @@ export function filterRecipes(recipes, term){
     }
     return filteredRecipes
 }
+export function filterOptions (option, letters) {
+    if(letters.length > 2) {
+        for(let i=0; i<option.length; i++){
+          if (option[i].textContent.toLowerCase().includes(letters)) {
+                option[i].style.display = "block"
+            }
+            else {
+                option[i].style.display = "none"
+            }
+    }
+    }
+    
+}

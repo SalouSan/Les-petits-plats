@@ -1,4 +1,4 @@
-import {filterRecipes} from "./models/searchBarFilter.js"
+import {filterOptions, filterRecipes} from "./models/searchBarFilter.js"
 import {Recipes} from "./models/displayRecipes.js"
 import {Lists} from "./models/displayLists.js"
 let recipes = []
@@ -67,6 +67,7 @@ getRecipes()
             let filteredRecipes = filterRecipes(recipes, e.target.value)
             displayRecipes(filteredRecipes)
             displayListofFiltersItems(filteredRecipes)
+            addTag()
         }
     })
 
@@ -80,6 +81,7 @@ getRecipes()
             if (e.target.value.length > 2) {
                 e.preventDefault()
                 addTag()
+                filterOptions(theOptions, e.target.value)
             }    
         })
     })
